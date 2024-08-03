@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novo Orçamento</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles/global.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <img src="../images/logo.png" alt="Logo" />
+      </div>
+      <div class="nav-user">
+        <img src="../images/user.png" alt="User" />
+      </div>
+    </nav>
+    <main class="card-conteiner">
+      <div class="card">
+        <div class="card-header">
+          <h1>Criar Novo Orçamento</h1>
+        </div>
+        <div class="card-form">
+          <form id="form-orcamento">
+            <div class="form-item">
+              <label for="cliente">Cliente</label>
+              <select id="cliente" name="cliente" required>
+                <!-- Options will be populated by JavaScript -->
+              </select>
+            </div>
+            <div class="form-item">
+              <label for="produtos-adicionados">Produtos</label>
+              <ul id="produtos-adicionados">
+                <!-- Produtos serão adicionados aqui -->
+              </ul>
+            </div>
+            <button id="add-item-button" type="button">Adicionar Item</button>
+            <button id="finalizar-orcamento-button" type="submit">
+              Finalizar Orçamento
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal para seleção de produtos -->
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Selecionar Produtos</h2>
+        <input
+          type="text"
+          id="search-product"
+          placeholder="Pesquisar produtos..."
+        />
+        <ul id="product-list">
+          <!-- Produtos serão listados aqui -->
+        </ul>
+      </div>
+    </div>
+
+    <script src="../lib/novo-orcamento"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

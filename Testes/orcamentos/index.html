@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orçamentos Existentes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles/global.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <img src="../images/logo.png" alt="Logo" />
+      </div>
+      <div class="nav-user">
+        <img src="../images/user.png" alt="User" />
+      </div>
+    </nav>
+    <main class="card-conteiner">
+      <div class="card">
+        <div class="card-header">
+          <h1>Orçamentos Existentes</h1>
+        </div>
+        <div class="orcamento-list">
+          <input
+            type="text"
+            id="search-orcamento"
+            placeholder="Buscar orçamento..."
+            onkeyup="filterOrcamentos()"
+          />
+          <div id="orcamento-list">
+            <!-- A lista de orçamentos será inserida aqui pelo JavaScript -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="orcamentos.js"></script>
+  </body>
+</html>
